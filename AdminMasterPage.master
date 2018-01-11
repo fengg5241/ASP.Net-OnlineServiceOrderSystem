@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/AdminMaster.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style3 {
+            line-height: 1.5em;
+            font-size: 0.9em;
+            padding: 40px;
+            position: relative;
+            left: 6px;
+            top: 2px;
+            height: 33px;
+        }
+    </style>
+</head>
+<body style="height: 405px">
+    <form runat="server">
+        <div class="page">
+            <div class="header">
+                <a runat="server" href="~/AdminHome.aspx">
+                    <asp:Image ID="Logo" runat="server" ImageUrl="~/Images/Logo.png" Height="151px" Width="651px" />
+                </a>
+            </div>
+
+
+
+            <div class="navbar">
+                <ul>
+                    <li><a runat="server" href="~/AdminPages/AdminHome.aspx">Home</a></li>
+                    <li><a runat="server" href="~/AdminPages/BlockListPage.aspx">blocklist</a></li>
+                    <li><a runat="server" href="~/AdminPages/AdminFAQ.aspx">FAQs</a></li>
+                    <li><asp:LinkButton ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click"></asp:LinkButton></li>
+                </ul>
+            </div>
+
+
+            <div class="auto-style3">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+
+
+
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMasterPage.master.cs" Inherits="UserMasterPage" %>
+
+<!DOCTYPE  html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Online Service Order System</title>
+    <link href="~/Styles/site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <div class="page">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>
+                            <div class="toolbar">
+                                <asp:Panel ID="usertoolbar" runat="server" Height="59px" Visible="false">
+                                    <div class="user">
+                                        <asp:Label ID="lbl_Test" runat="server" Text="HELLO,"></asp:Label>
+                                    </div>
+
+                                    <div class="points">
+                                        <asp:ScriptManager ID="ScriptManager1" runat="server">
+                                        </asp:ScriptManager>
+                                        <b>Points:
+                                            <asp:Image ID="img_pointslogo" runat="server" Width="15px" ImageUrl="~/Images/coinshover.gif" />
+                                            <asp:Label ID="lbl_points" runat="server"></asp:Label>
+                                            <a runat="server" href="~/UserPages/Rewards.aspx">
+                                                <asp:Image ID="img_notification" runat="server" Width="15px" ImageUrl="~/Images/notification.gif" Visible="false" ToolTip="You have unredeemed points, please click here to redeem" />
+                                            </a>
+                                            <a runat="server" href="~/UserPages/MyTickets.aspx" style="text-decoration: none; color: black; font-weight: bold; float: right;">
+                                                <asp:Image ID="msg_notification" runat="server" Width="15px" ImageUrl="~/Images/bell.gif" Visible="false" ToolTip="You have unread message(s)" />
+                                                <asp:Image ID="img_Messages" runat="server" Width="15px" ImageUrl="~/Images/MessageIcon.png" />
+                                                <asp:Label ID="lbl_Messages" runat="server"></asp:Label></a>
+                                        </b>
+                                    </div>
+
+                                </asp:Panel>
+                                <asp:Panel ID="nousertoolbar" runat="server" Height="30px" Visible="false" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="header">
+                                <a runat="server" href="~/UserPages/Homepage.aspx">
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Logo.png" Height="151px" Width="651px" />
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="navbar" width="100%">
+                                <ul width="100%">
+                                    <li><a runat="server" href="~/UserPages/Homepage.aspx">Home</a></li>
+                                    <li><a runat="server" href="~/UserPages/ServiceView.aspx">Services</a>
+                                        <ul>
+                                            <li><a runat="server" href="~/UserPages/ServiceView.aspx?TypeId=CL">Cleaning</a></li>
+                                            <li><a runat="server" href="~/UserPages/ServiceView.aspx?TypeId=RP">Repair</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a runat="server" href="~/UserPages/UserProfile.aspx">Profile</a>
+                                        <ul>
+                                            <li><a runat="server" href="~/UserPages/Settings.aspx">Settings</a></li>
+                                            <li><a runat="server" href="~/UserPages/Rewards.aspx">Rewards</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a runat="server" href="~/UserPages/OrderView.aspx">My Orders</a></li>
+                                    <li><a runat="server" href="~/UserPages/CustomerFAQ.aspx">FAQs</a></li>
+                                    <li><a runat="server" href="~/UserPages/UserContactStart.aspx">Contact</a></li>
+                                    <li><asp:LinkButton ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click"></asp:LinkButton></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="main">
+                                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <div class="footer">
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
