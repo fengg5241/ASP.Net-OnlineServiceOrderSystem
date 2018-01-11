@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="801ebc98c57943c3af643cf456c3fdaa" Name="Diagram1">
+        <EntityTypeShape EntityType="ServiceOrderModel.Administartor" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceOrderModel.ContactUs" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceOrderModel.Expert" Width="1.5" PointX="0.875" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceOrderModel.Order" Width="1.5" PointX="3.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceOrderModel.OrderReview" Width="1.5" PointX="9.375" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceOrderModel.OrderTimeslot" Width="1.5" PointX="7.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceOrderModel.Payment" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceOrderModel.Service" Width="1.5" PointX="3.375" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceOrderModel.ServiceTimeslot" Width="1.5" PointX="3.375" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceOrderModel.User" Width="1.5" PointX="0.875" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceOrderModel.UserAddress" Width="1.5" PointX="0.5" PointY="12.5" IsExpanded="true" />
+        <AssociationConnector Association="ServiceOrderModel.FK_Service_Expert" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceOrderModel.FK_Order_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceOrderModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceOrderModel.FK_OrderReview_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceOrderModel.FK_OrderTimeslot_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceOrderModel.FK_Payment_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceOrderModel.FK_OrderTimeslot_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceOrderModel.FK_ServiceTimeslot_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceOrderModel.FK_UserAddress_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ServiceOrderModel.ServiceType" Width="1.5" PointX="7" PointY="4.375" />
+        <AssociationConnector Association="ServiceOrderModel.FK_Service_ServiceType" />
+        <EntityTypeShape EntityType="ServiceOrderModel.UserPoint" Width="1.5" PointX="3.125" PointY="15.5" />
+        <EntityTypeShape EntityType="ServiceOrderModel.UserPointTranscation" Width="1.5" PointX="7.5" PointY="13.125" />
+        <AssociationConnector Association="ServiceOrderModel.FK_UserPointTranscation_Order" />
+        <AssociationConnector Association="ServiceOrderModel.FK_UserPoint_User" />
+        <AssociationConnector Association="ServiceOrderModel.FK_UserPointTranscation_User" />
+        <EntityTypeShape EntityType="ServiceOrderModel.OrderView" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ServiceOrderModel.ServiceView" Width="1.5" PointX="10.375" PointY="5.75" />
+        <EntityTypeShape EntityType="ServiceOrderModel.DayOfWeek" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ServiceOrderModel.Timeslot" Width="1.5" PointX="11.75" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
